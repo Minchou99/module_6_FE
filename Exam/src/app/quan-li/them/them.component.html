@@ -1,0 +1,156 @@
+<div class="mx-5 px-5 pt-3">
+  <h2 class="text-center fw-bold text-success ">Thêm mới vé xe</h2>
+
+  <!--  <div class="justify-content-center d-flex">-->
+  <!--    <a class="btn btn-success btn-outline-warning btn-sm" routerLink="">-->
+  <!--      <i class="fa-solid fa-house"></i>-->
+  <!--      <span class="text-light"> Quay lại</span>-->
+  <!--    </a>-->
+  <!--  </div>-->
+
+  <div class="d-flex mt-3 mb-3 justify-content-center">
+    <form class="w-50 border border-2 border-success p-3 bg-success bg-opacity-25 rounded" [formGroup]="veXeForm"
+          *ngIf="veXeForm" (ngSubmit)="submit()">
+
+      <div class="form-group">
+        <label class="h6">Điểm đi:</label>
+        <div class="input-group">
+          <input type="text" class="form-control" formControlName="diemDi"
+                 [ngClass]="(veXeForm.controls['diemDi'].touched) ? veXeForm.controls['diemDi'].invalid ? 'is-invalid' : 'is-valid' : '' "/>
+          <span class="input-group-text"> <i class="fa-solid fa-person-circle-question"></i></span>
+          <div class="invalid-feedback">
+            <div *ngIf="veXeForm.controls['diemDi'].hasError('required') && veXeForm.controls['diemDi'].touched"
+                 style="color: #fff">
+              Vui lòng nhập điểm đi
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-3 form-group">
+        <label class="h6">Điểm đến:</label>
+        <div class="input-group">
+          <input type="text" class="form-control" formControlName="diemDen"
+                 [ngClass]="(veXeForm.controls['diemDen'].touched) ? veXeForm.controls['diemDen'].invalid ? 'is-invalid' : 'is-valid' : '' "/>
+          <span class="input-group-text"><i class="fa-solid fa-id-card"></i></span>
+          <div class="invalid-feedback">
+            <div *ngIf="veXeForm.controls['diemDen'].hasError('required') && veXeForm.controls['diemDen'].touched"
+                 style="color: #fff">
+              Vui lòng nhập điểm đến
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-3 form-group">
+        <label class="h6">Ngày khởi hành:</label>
+        <input type="date" class="form-control" formControlName="ngayKhoiHanh"
+               [ngClass]="(veXeForm.controls['ngayKhoiHanh'].touched) ? veXeForm.controls['ngayKhoiHanh'].invalid ? 'is-invalid' : 'is-valid' : '' "/>
+        <div class="invalid-feedback">
+          <div
+            *ngIf="veXeForm.controls['ngayKhoiHanh'].hasError('required') && veXeForm.controls['ngayKhoiHanh'].touched"
+            style="color: #fff">
+            Vui lòng nhập ngay khoi hanh
+          </div>
+          <div
+            *ngIf="veXeForm.controls['ngayKhoiHanh'].hasError('pattern') && veXeForm.controls['ngayKhoiHanh'].touched"
+            style="color: #fff">
+            Ngày Khởi hành chưa đúng định dạng dd/MM/yyyy
+          </div>
+          <div *ngIf="veXeForm.controls['ngayKhoiHanh'].hasError('ngayKhoiHanhKhongDung') &&
+                   !veXeForm.controls['ngayKhoiHanh'].hasError('required') &&
+                   veXeForm.controls['ngayKhoiHanh'].touched" style="color: #fff">
+            Ngày khởi hành phải bắt đầu từ ngày mai.
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-3 form-group">
+        <label class="h6">Giờ khởi hành:</label>
+        <div class="input-group">
+          <input type="text" class="form-control" formControlName="gioKhoiHang"
+                 [ngClass]="(veXeForm.controls['gioKhoiHang'].touched) ? veXeForm.controls['gioKhoiHang'].invalid ? 'is-invalid' : 'is-valid' : '' "/>
+          <span class="input-group-text"><i class="fa-solid fa-id-card"></i></span>
+          <div class="invalid-feedback">
+            <div
+              *ngIf="veXeForm.controls['gioKhoiHang'].hasError('required') && veXeForm.controls['gioKhoiHang'].touched"
+              style="color: #fff">
+              Vui lòng nhập giờ khởi hành
+            </div>
+            <div
+              *ngIf="veXeForm.controls['gioKhoiHang'].hasError('pattern') && veXeForm.controls['gioKhoiHang'].touched"
+              style="color: #fff">
+              Giờ khởi hành hh:mm
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-3 form-group">
+        <label class="h6">Nhà xe:</label>
+        <div class="input-group">
+          <select class="form-select" formControlName="nhaXe"
+                  [ngClass]="(veXeForm.controls.nhaXe.touched)?veXeForm.controls.nhaXe.invalid?'is-invalid':'is-valid':''">
+            <option value="">--Chon nha Xe--</option>
+            <option *ngFor="let x of nhaXeList" [ngValue]= "x">{{x.tenNhaXe}}</option>
+          </select>
+          <span class="input-group-text"><i class="fa-solid fa-ranking-star"></i></span>
+          <div class="invalid-feedback">
+            <div
+              *ngIf="veXeForm.controls.nhaXe.hasError('required') && veXeForm.controls.nhaXe.touched"
+              style="color: #fff">
+              Vui lòng chon nha Xe
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-3 form-group">
+        <label class="h6">Số lượng:</label>
+        <div class="input-group">
+          <input type="text" class="form-control" formControlName="soLuong"
+                 [ngClass]="(veXeForm.controls['soLuong'].touched) ? veXeForm.controls['soLuong'].invalid ? 'is-invalid' : 'is-valid' : '' "/>
+          <span class="input-group-text"><i class="fa-solid fa-map-location-dot"></i></span>
+          <div class="invalid-feedback">
+            <div *ngIf="veXeForm.controls['soLuong'].hasError('required') && veXeForm.controls['soLuong'].touched"
+                 style="color: #fff">
+              Vui lòng nhập số lượng
+            </div>
+            <div *ngIf="veXeForm.controls['soLuong'].hasError('pattern') && veXeForm.controls['soLuong'].touched"
+                 style="color: #fff">
+              Số lượng phải là số nguyên dương
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-3 form-group">
+        <label class="h6">Giá vé:</label>
+        <div class="input-group">
+          <input type="text" class="form-control" formControlName="giaVe"
+                 [ngClass]="(veXeForm.controls['giaVe'].touched) ? veXeForm.controls['giaVe'].invalid ? 'is-invalid' : 'is-valid' : '' "/>
+          <span class="input-group-text"><i class="fa-solid fa-map-location-dot"></i></span>
+          <div class="invalid-feedback">
+            <div *ngIf="veXeForm.controls['giaVe'].hasError('required') && veXeForm.controls['giaVe'].touched"
+                 style="color: #fff">
+              Vui lòng nhập giá vé
+            </div>
+            <div *ngIf="veXeForm.controls['giaVe'].hasError('pattern') && veXeForm.controls['giaVe'].touched"
+                 style="color: #fff">
+              Giá vé phải là số nguyên dương
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-3 text-center">
+        <button type="submit" class="btn btn-success btn-sm border border-2 border-warning">
+          Thêm mới <i class="fa-solid fa-floppy-disk"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+

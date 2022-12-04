@@ -1,0 +1,226 @@
+{
+  "nhaXe": [
+    {
+      "id": "1",
+      "tenNhaXe": "Phương Trang"
+    },
+    {
+      "id": "2",
+      "tenNhaXe": "Trung Nguyên"
+    },
+    {
+      "id": "3",
+      "tenNhaXe": "Trung Tính"
+    }
+  ],
+  "veXe": [
+    {
+      "id": 1,
+      "giaVe": "10000",
+      "diemDi": "Da Nang",
+      "diemDen": "Hue",
+      "ngayKhoiHanh": "2022-12-02",
+      "gioKhoiHang": "20:00",
+      "nhaXe": {
+        "id": "1",
+        "tenNhaXe": "Phương Trang"
+      },
+      "soLuong": 10
+    },
+    {
+      "id": 2,
+      "giaVe": "500000",
+      "diemDi": "Da Nang",
+      "diemDen": "Hai Phong",
+      "ngayKhoiHanh": "2022-12-02",
+      "gioKhoiHang": "06:00",
+      "nhaXe": {
+        "id": "1",
+        "tenNhaXe": "Phương Trang"
+      },
+      "soLuong": 5
+    },
+    {
+      "id": 3,
+      "giaVe": "450000",
+      "diemDi": "Da Nang",
+      "diemDen": "Ha Noi",
+      "ngayKhoiHanh": "2022-12-02",
+      "gioKhoiHang": "07:40",
+      "nhaXe": {
+        "id": "1",
+        "tenNhaXe": "Phương Trang"
+      },
+      "soLuong": 15
+    },
+    {
+      "id": 5,
+      "giaVe": "120000",
+      "diemDi": "Da Nang",
+      "diemDen": "Hue",
+      "ngayKhoiHanh": "2022-12-02",
+      "gioKhoiHang": "12:30",
+      "nhaXe": {
+        "id": "1",
+        "tenNhaXe": "Phương Trang"
+      },
+      "soLuong": "14"
+    },
+    {
+      "id": 6,
+      "giaVe": "120000",
+      "diemDi": "Da Nang",
+      "diemDen": "hue",
+      "ngayKhoiHanh": "2022-12-02",
+      "gioKhoiHang": "15:45",
+      "nhaXe": {
+        "id": "1",
+        "tenNhaXe": "Phương Trang"
+      },
+      "soLuong": "12"
+    },
+    {
+      "id": 7,
+      "giaVe": "10000",
+      "diemDi": "Da Nang",
+      "diemDen": "Hue",
+      "ngayKhoiHanh": "2022-12-02",
+      "gioKhoiHang": "20:00",
+      "nhaXe": {
+        "id": "1",
+        "tenNhaXe": "Phương Trang"
+      },
+      "soLuong": 10
+    },
+    {
+      "id": 8,
+      "giaVe": "500000",
+      "diemDi": "Da Nang",
+      "diemDen": "Hai Phong",
+      "ngayKhoiHanh": "2022-12-02",
+      "gioKhoiHang": "06:00",
+      "nhaXe": {
+        "id": "1",
+        "tenNhaXe": "Phương Trang"
+      },
+      "soLuong": 5
+    },
+    {
+      "id": 9,
+      "giaVe": "450000",
+      "diemDi": "Da Nang",
+      "diemDen": "Ha Noi",
+      "ngayKhoiHanh": "2022-12-02",
+      "gioKhoiHang": "07:40",
+      "nhaXe": {
+        "id": "1",
+        "tenNhaXe": "Phương Trang"
+      },
+      "soLuong": 15
+    },
+    {
+      "id": 10,
+      "giaVe": "120000",
+      "diemDi": "Da Lat",
+      "diemDen": "Nha Trang",
+      "ngayKhoiHanh": "2022-12-02",
+      "gioKhoiHang": "12:00",
+      "nhaXe": {
+        "id": "1",
+        "tenNhaXe": "Phương Trang"
+      },
+      "soLuong": "12"
+    },
+    {
+      "id": 11,
+      "giaVe": "100000",
+      "diemDi": "Ha Noi",
+      "diemDen": "Hai Phong",
+      "ngayKhoiHanh": "2022-12-06",
+      "gioKhoiHang": "12:30",
+      "nhaXe": {
+        "id": "1",
+        "tenNhaXe": "Phương Trang"
+      },
+      "soLuong": 12
+    },
+    {
+      "id": 12,
+      "giaVe": "120000",
+      "diemDi": "Ha Noi",
+      "diemDen": "Sai Gon",
+      "ngayKhoiHanh": "2022-12-02",
+      "gioKhoiHang": "12:00",
+      "nhaXe": {
+        "id": "1",
+        "tenNhaXe": "Phương Trang"
+      },
+      "soLuong": 4
+    },
+    {
+      "id": 13,
+      "giaVe": "200000",
+      "diemDi": "Hà Nội",
+      "diemDen": "Lào Cai",
+      "ngayKhoiHanh": "2022-12-02",
+      "gioKhoiHang": "12:00",
+      "nhaXe": {
+        "id": "1",
+        "tenNhaXe": "Phương Trang"
+      },
+      "soLuong": 17
+    },
+    {
+      "id": 14,
+      "giaVe": "120000",
+      "diemDi": "Đà Nẵng",
+      "diemDen": "Hà Nội",
+      "ngayKhoiHanh": "2022-12-02",
+      "gioKhoiHang": "12:00",
+      "nhaXe": {
+        "id": "1",
+        "tenNhaXe": "Phương Trang"
+      },
+      "soLuong": 16
+    },
+    {
+      "giaVe": "12000000",
+      "diemDi": "Đà Nẵng",
+      "diemDen": "Hà Nội",
+      "ngayKhoiHanh": "2022-11-08",
+      "gioKhoiHang": "12:00",
+      "nhaXe": {
+        "id": "1",
+        "tenNhaXe": "Phương Trang"
+      },
+      "soLuong": "15",
+      "id": 15
+    },
+    {
+      "giaVe": "120000",
+      "diemDi": "Đà Nẵng",
+      "diemDen": "Huế",
+      "ngayKhoiHanh": "2022-12-12",
+      "gioKhoiHang": "12:20",
+      "nhaXe": {
+        "id": "1",
+        "tenNhaXe": "Phương Trang"
+      },
+      "soLuong": "12",
+      "id": 16
+    },
+    {
+      "id": 17,
+      "giaVe": "1200000",
+      "diemDi": "Đà Nẵng",
+      "diemDen": "Huế",
+      "ngayKhoiHanh": "2022-12-21",
+      "gioKhoiHang": "12:20",
+      "nhaXe": {
+        "id": "1",
+        "tenNhaXe": "Phương Trang"
+      },
+      "soLuong": "12"
+    }
+  ]
+}
